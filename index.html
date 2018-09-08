@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>maewen</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="css/fonts.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="css/webflow.css">
+  <link rel="stylesheet" type="text/css" href="css/maewenforest.webflow.css">
+  <link rel="stylesheet" type="text/css" href="css/maewen.css">
+  <script>
+    if (/mobile/i.test(navigator.userAgent)) {
+      document.documentElement.className += ' w-mobile';
+    }
+  </script>
+</head>
+
+<body onload="init();">
+
+<div style="display: none;">
+  <div id="send-message-form" class="container">
+    <div class="center-form send-message-form">
+      <button title="Close (Esc)" type="button" class="form-close">×</button>
+
+      <h3 class="center-form-heading">Contact</h3>
+
+      <p>
+        Operator and contact:<br>
+        <br>
+        Maewen Forest<br>
+        Glockseestr. 3b<br>
+        30169 Hanover, Germany
+      </p>
+
+      <p>
+        Telephone: +49 177 5242801<br>
+        Mail: mail@maewen.com
+      </p>
+
+      <p>
+        Source for images and graphics:<br>
+        Tim Benke, <a href="http://www.timbenke.de">www.timbenke.de</a><br>
+        Logos from the various companies
+      </p>
+    </div>
+  </div>
+
+  <div id="data-privacy" class="container">
+    <div class="center-form send-message-form">
+      <button title="Close (Esc)" type="button" class="form-close">×</button>
+      <h2>Data Privacy</h2>
+      <p>
+        The web server writes log files about site access and the ip addresses of website visitors.
+        These serve for error diagnosis and aren't used for other purposes or distributed elsewhere.
+        No cookies or user accounts are used on this site, which means that the access information
+        are not related to specific persons.
+
+        Apart from this no personal information is collected, saved or analyzed.
+      </p>
+      <h2>Datenschutzerklärung</h2>
+      <p>
+        Der Webserver schreibt Logdateien mit den Zugriffen und den IP-Adressen der Zugreifer.
+        Diese dienen der Fehlersuche im Krisenfall und werden ansonsten nicht ausgewertet.
+        Da es hier keine Benutzerkonten und keine Tracking-Cookies o.ä. gibt, betrachte ich diese
+        Logdateien nicht als personenbezogen.
+
+        Abgesehen davon werden keine Daten erhoben, gespeichert oder ausgewertet.
+      </p>
+    </div>
+  </div>
+</div>
+
+<main class="page-row page-row-expanded">
+  <div class="w-container content">
+    <div class="links-menu">
+      <ul>
+        <li>
+          <a href="https://www.facebook.com/maewenmusic">
+            <figure>
+              <img class="logo" src="images/facebook.png" alt="maewen's facebook acount">
+              <figcaption>facebook</figcaption>
+            </figure>
+          </a>
+        </li>
+
+        <li>
+          <a href="https://soundcloud.com/maewenmusic">
+            <figure>
+              <img class="logo" src="images/soundcloud.png" alt="maewen's soundcloud acount">
+              <figcaption>soundcloud</figcaption>
+            </figure>
+          </a>
+        </li>
+
+        <li>
+          <a href="https://maewen.bandcamp.com">
+            <figure>
+              <img class="logo" src="images/bandcamp.png" alt="maewen's bandcamp page">
+              <figcaption>bandcamp</figcaption>
+            </figure>
+          </a>
+        </li>
+
+        <li>
+          <a href="https://www.youtube.com/channel/UCZR132dxDK4Ai9eslnczQjg/videos">
+            <figure>
+              <img class="logo" src="images/youtube.png" alt="maewen's youtube acount">
+              <figcaption>youtube</figcaption>
+            </figure>
+          </a>
+        </li>
+
+        <li>
+          <a href="https://twitter.com/MaewenForest">
+            <figure>
+              <img class="logo" src="images/twitter.png"
+                   alt="maewen's twitter acount @MaewenForest">
+              <figcaption>twitter</figcaption>
+            </figure>
+          </a>
+        </li>
+
+        <li>
+          <a id="send-message-button" href="#send-message-form">
+            <figure>
+              <img class="logo" src="images/contact.png" alt="contact maewen">
+              <figcaption>contact</figcaption>
+            </figure>
+          </a>
+        </li>
+
+        <!--<li>-->
+        <!--<a href="data-privacy.html">-->
+        <!--<figure>-->
+        <!--<img class="logo" src="images/contact.png" alt="data privacy">-->
+        <!--<figcaption>data privacy</figcaption>-->
+        <!--</figure>-->
+        <!--</a>-->
+        <!--</li>-->
+
+        <li>
+          <a id="data-privacy-button" href="#data-privacy">
+            <figure>
+              <img class="logo" src="images/contact.png" alt="data privacy">
+              <figcaption>data privacy</figcaption>
+            </figure>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</main>
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/magnific-popup/jquery.magnific-popup.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<script type="text/javascript">
+  function createPopup(button) {
+    return $(button).magnificPopup({
+      type: 'inline',
+      preloader: false,
+      focus: '#name',
+      modal: true,
+
+      // When an element is focused, some mobile browsers in some cases zoom in
+      // It looks not nice, so we disable it:
+      callbacks: {
+        BeforeOpen: function () {
+          if ($(window).width() < 700) {
+            this.st.focus = false;
+          } else {
+            this.st.focus = '#name';
+          }
+        }
+      }
+    });
+  }
+
+  function init() {
+    createPopup('#send-message-button');
+    createPopup('#data-privacy-button');
+
+    $(document).on("click", ".form-close",
+        function (e) {
+          e.preventDefault();
+          $.magnificPopup.close();
+        }
+    );
+  }
+</script>
+
+</body>
+
+</html>

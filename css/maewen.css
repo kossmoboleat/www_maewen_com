@@ -1,0 +1,68 @@
+.logo {
+    width: 80px;
+}
+
+.links-menu ul li {
+    list-style-type: none;
+    color: #b8b8b8;
+    margin-top: 6px;
+}
+
+figcaption {
+    color: #b8b8b8;
+}
+
+.links-menu {
+    position: absolute;
+    left: 15%;
+    top: 5%;
+}
+
+.center-form {
+    max-width: 630px;
+    padding: 15px;
+    margin: 0 auto;
+    background: #FFF;
+}
+
+.center-form .center-form-heading {
+    margin-top: 5px;
+}
+
+.form-close {
+    width: 44px;
+    height: 44px;
+    line-height: 44px;
+
+    float: right;
+
+    text-decoration: none;
+    text-align: center;
+    opacity: 0.65;
+    filter: alpha(opacity=65);
+    padding: 0 0 18px 10px;
+
+    font-style: normal;
+    font-size: 36px;
+    font-family: Arial, Baskerville, monospace;
+    color: darkblue;
+
+    background-color: white;
+    border: none;
+}
+
+.submit-message-button {
+    color: white;
+}
+
+.message {
+    position: absolute;
+    top: 20%;
+    font-size: 24px;
+    color: black;
+}
+
+#send-message-form {
+    position: relative;
+    z-index: 5;
+}
