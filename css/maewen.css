@@ -2,7 +2,7 @@
     width: 80px;
 }
 
-.links-menu ul li {
+.menu ul li {
     list-style-type: none;
     color: #b8b8b8;
     margin-top: 6px;
@@ -15,6 +15,12 @@ figcaption {
 .links-menu {
     position: absolute;
     left: 15%;
+    top: 5%;
+}
+
+.contact-menu {
+    position: absolute;
+    left: 30%;
     top: 5%;
 }
 
