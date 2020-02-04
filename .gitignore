@@ -74,3 +74,4 @@ Icon
 
 # Thumbnails
 ._*
+/.idea/sonarlint/**
